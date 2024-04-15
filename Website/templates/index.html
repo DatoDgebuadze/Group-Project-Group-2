@@ -1,14 +1,62 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title>Welcome</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Group project using datasets for European championship and fuel consumption ratings.">
+    <title>Group Project</title>
+
+    <!-- Link to the CSS file -->
+    <link rel="stylesheet" href="../static/styles.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #333366;
+        }
+
+        p {
+            color: #666666;
+        }
+
+        strong {
+            font-weight: bold;
+        }
+
+        a {
+            color: #007BFF;
+            text-decoration: none;
+            margin-top: 20px;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 
 <body>
     <h1>Welcome to {{ app_name }}!</h1>
-    <p>This is the welcome page of my Flask app.</p>
-    <a href="/about">About</a>
+    <p>This website is using datasets for European championship and fuel consumption ratings.</p>
+    <p>The website is a work in progress and is done for college; information provided or predicted can be inaccurate.
+    </p>
+    <p>People Working on this project: <strong>Samuel Debruin</strong>, <strong>Davit Dgebuadze</strong></p>
+    <p>Professor: Mark Cassar</p>
+
+    <h2>This website consists of:</h2>
+    <ul>
+        <li><strong>Main page</strong>: You are currently visiting this page.</li>
+        <li><strong>About page</strong>: Provides more information about the purpose of the website.</li>
+        <li><strong>Data page</strong>: Contains information about the models.</li>
+    </ul>
+
+    <a href="{{ url_for('about') }}">About</a>
 </body>
 
 </html>

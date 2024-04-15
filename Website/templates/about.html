@@ -1,14 +1,75 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Information about the Group Project using machine learning algorithms and datasets for European championship and fuel consumption.">
     <title>About</title>
+
+    <!-- External CSS file -->
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #333366;
+        }
+
+        p {
+            color: #666666;
+        }
+
+        strong {
+            font-weight: bold;
+        }
+
+        a {
+            color: #007BFF;
+            text-decoration: none;
+            margin-top: 20px;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 
 <body>
-    <h1>Hello {{ app_name }}</h1>
-    <p>This is the about page of {{ app_name }}.</p>
-    <a href="/">Back to Home</a>
+    <h1>About {{ app_name }}</h1>
+
+    <h2>The Project:</h2>
+    <p>The project uses two supervised machine learning algorithms: <strong>RandomForestClassifier</strong> and
+        <strong>RandomForestRegressor</strong>.
+    </p>
+    <p>The goal is to develop a website using Flask to predict winning teams for the European championship and fuel
+        consumption per 100km in the city.</p>
+
+    <h2>About the Dataset</h2>
+    <p>We have two datasets:</p>
+    <ul>
+        <li>Fuel consumption dataset</li>
+        <li>European championship dataset in soccer</li>
+    </ul>
+    <p>We are aiming to predict the winning teams for the European championship and fuel consumption per 100km in the
+        city using these datasets.</p>
+
+    <h2>How to Install This Project?</h2>
+    <p>You will need to have <strong>VSCode</strong> installed on your machine.</p>
+    <p>This repository provides a <code>requirements.txt</code> file.</p>
+    <p>Once you have VSCode installed, you can either download the ZIP copy of the project or clone the project using
+        Git.</p>
+    <p>To install all the required packages for the project to run, run the following command in your terminal:</p>
+    <pre><code>pip install -r requirements.txt</code></pre>
+
+    <!-- Redirect to /main route -->
+    <a href="{{ url_for('index') }}">Back to Home</a>
 </body>
 
 </html>

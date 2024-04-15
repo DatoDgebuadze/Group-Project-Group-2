@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Data Table</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th,
+        td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        tr:hover {
+            background-color: #f5f5f5;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Data Tables</h1>
+
+    <h2>European Championship Dataset</h2>
+    <table>
+        <thead>
+            <tr>
+                <!-- Loop through column names -->
+                {% for column in table_html1.columns %}
+                <th>{{ column }}</th>
+                {% endfor %}
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Loop through rows -->
+            {% for row in table_html1.iterrows() %}
+            <tr>
+                {% for value in row[1] %}
+                <td>{{ value }}</td>
+                {% endfor %}
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <h2>Fuel Consumption Dataset</h2>
+    <table>
+        <thead>
+            <tr>
+                <!-- Loop through column names -->
+                {% for column in table_html2.columns %}
+                <th>{{ column }}</th>
+                {% endfor %}
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Loop through rows -->
+            {% for row in table_html2.iterrows() %}
+            <tr>
+                {% for value in row[1] %}
+                <td>{{ value }}</td>
+                {% endfor %}
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ url_for('index') }}">Back to Home</a>
+</body>
+
+</html>
