@@ -41,41 +41,4 @@
                 {% endfor %}
             </tr>
         </thead>
-        <tbody>
-            <!-- Loop through rows -->
-            {% for row in table_html1.iterrows() %}
-            <tr>
-                {% for value in row[1] %}
-                <td>{{ value }}</td>
-                {% endfor %}
-            </tr>
-            {% endfor %}
-        </tbody>
     </table>
-
-    <h2>Fuel Consumption Dataset</h2>
-    <table>
-        <thead>
-            <tr>
-                <!-- Loop through column names -->
-                {% for column in table_html2.columns %}
-                <th>{{ column }}</th>
-                {% endfor %}
-            </tr>
-        </thead>
-        <tbody>
-            <!-- Loop through rows -->
-            {% for row in table_html2.iterrows() %}
-            <tr>
-                {% for value in row[1] %}
-                <td>{{ value }}</td>
-                {% endfor %}
-            </tr>
-            {% endfor %}
-        </tbody>
-    </table>
-
-    <a href="{{ url_for('index') }}">Back to Home</a>
-</body>
-
-</html>

@@ -4,7 +4,6 @@ import sqlite3
 import os
 
 
-
 current_directory = os.getcwd()
 print("Current Directory:", current_directory)
 
@@ -27,7 +26,7 @@ def about():
 
 @app.route("/data")
 def data():
-    con = sqlite3.connect('../database/pd_data.db')
+    con = sqlite3.connect('database/pd_data.db')
     # Query SQLite database to read data
     result_1 = pd.read_sql_query("SELECT * FROM pd_euros", con)
     # result_2 = pd.read_sql_query("SELECT * FROM pd_fuel", con)
